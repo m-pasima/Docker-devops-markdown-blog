@@ -104,13 +104,14 @@ docker run -d -p 8080:8080 devops-blog
 
 ---
 
-## 📸 Screenshots
+## 📸 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/m-pasima/Docker-devops-markdown-blog/main/static/devops-logo.png" alt="screenshot" width="120">
+  <img src="https://github.com/user-attachments/assets/26a61150-5aea-4193-a07f-7438cc530242" alt="screenshot" width="800" />
 </p>
 
-![screenshot](https://via.placeholder.com/800x400?text=Blog+Screenshot+Here)
+
+
 
 ---
 
