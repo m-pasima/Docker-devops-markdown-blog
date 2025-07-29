@@ -15,8 +15,8 @@ for mdfile in posts/*.md; do
   title=$(grep -m1 '^# ' "$mdfile" | sed 's/^# //')
 
   if [ -z "$title" ]; then
-    echo "[-] Skipping $mdfile (no H1 title found)"
-    continue
+    title=$(grep -m1 '\S' "$mdfile" | head -n1)
+    echo "[*] No H1 title found in $mdfile. Using first line: $title"
   fi
 
   echo "  • $base → $outfile (Title: $title)"
@@ -37,6 +37,9 @@ POST_LINKS=""
 for mdfile in posts/*.md; do
   base=$(basename "$mdfile" .md)
   title=$(grep -m1 '^# ' "$mdfile" | sed 's/^# //')
+  if [ -z "$title" ]; then
+    title=$(grep -m1 '\S' "$mdfile" | head -n1)
+  fi
   if [ -n "$title" ]; then
     POST_LINKS="${POST_LINKS}<a class='post-link' href='${base}.html'>${title}</a>\\n"
   fi
