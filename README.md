@@ -18,7 +18,7 @@ This project builds a sleek, modern, and fully Dockerized static site using:
 
 - Markdown for content
 - Custom HTML templates
-- `markdown-html` + `serve` for conversion & hosting
+- `pandoc` + `serve` for conversion & hosting
 - A clean DevOps-style UI
 
 Perfect for students, bootcamps, or professionals who want to showcase tech writeups in style.
@@ -98,7 +98,7 @@ docker run -d -p 8080:8080 devops-blog
 | --------------- | -------------------------------- |
 | `Docker`        | Containerize the site generator  |
 | `Node.js`       | Used inside container (alpine)   |
-| `markdown-html` | Converts `.md` to HTML           |
+| `pandoc`        | Converts `.md` to HTML           |
 | `serve`         | Static server for `/public` HTML |
 | `bash` + `sed`  | Template injection logic         |
 

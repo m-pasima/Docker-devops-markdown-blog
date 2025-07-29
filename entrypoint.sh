@@ -21,7 +21,7 @@ for mdfile in posts/*.md; do
 
   echo "  • $base → $outfile (Title: $title)"
 
-  npx markdown-html "$mdfile" > "public/${base}.content.html"
+  pandoc "$mdfile" -f markdown -t html > "public/${base}.content.html"
 
   sed "s|<!-- POST_TITLE -->|$title|g" templates/post_template.html | \
     sed "/<!-- POST_BODY -->/{

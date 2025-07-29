@@ -2,8 +2,9 @@ FROM node:18-alpine
 
 LABEL maintainer="DevOps Academy - Pasima"
 
-# Install serve and markdown-html
-RUN npm install -g serve markdown-html
+# Install pandoc and serve
+RUN apk add --no-cache pandoc \
+    && npm install -g serve
 
 # Create working directories
 WORKDIR /app
