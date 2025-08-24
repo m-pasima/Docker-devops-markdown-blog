@@ -1,0 +1,87 @@
+/* Base theme (matches your gradient look) */
+.theme {
+  background: linear-gradient(120deg, #232526 0%, #2c5364 100%);
+  color: #fff;
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Top bar */
+.topbar {
+  background: rgba(44, 229, 193, 0.07);
+  border-bottom: 1px solid #44e7b6;
+}
+.topbar-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.brand {
+  font-family: 'Montserrat', sans-serif;
+  color: #44e7b6; text-decoration: none; font-weight: 700; letter-spacing: 1px;
+}
+.nav a {
+  color: #44e7b6; text-decoration: none; font-weight: 600; margin-left: 1rem;
+  padding: 0.35rem 0.75rem; border-radius: 999px; border: 1px solid rgba(68,231,182,.35);
+  background: rgba(0,0,0,.25);
+}
+.nav a:hover {
+  color: #feca57; border-color: #feca57; background: rgba(0,0,0,.35);
+}
+
+/* Layout & article card */
+.wrap { max-width: 980px; margin: 2rem auto; padding: 0 1rem; }
+.post-card {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 26px rgba(0,0,0,0.25);
+}
+.post-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  color: #44e7b6; margin: 0 0 1rem 0; font-size: 2.1rem; letter-spacing: 1px;
+}
+h2, h3 { color: #feca57; }
+
+/* Links */
+a { color: #44e7b6; }
+a:hover { color: #feca57; }
+
+/* Code blocks */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+pre {
+  background: #0e141a; color: #e8edf2;
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 0.9rem 1rem; overflow: auto; border-radius: 12px;
+}
+code {
+  background: rgba(255,255,255,.08); padding: 0.15rem 0.35rem; border-radius: 6px;
+}
+
+/* Lists, blockquotes, tables for readability */
+blockquote {
+  border-left: 4px solid #44e7b6; background: rgba(0,0,0,.25);
+  padding: 0.75rem 1rem; margin: 1rem 0; color: #e6f7f1;
+}
+table {
+  border-collapse: collapse; width: 100%; overflow: auto;
+}
+th, td {
+  border: 1px solid rgba(255,255,255,.15);
+  padding: 0.5rem 0.6rem;
+}
+th { background: rgba(44,229,193,.12); }
+
+/* Footer */
+.footer {
+  text-align: center; color: #cfeee6;
+  margin: 2rem 0 3rem; font-size: .95rem;
+}
+
+/* Optional: Posts index at /posts if you later generate it */
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 1rem; }
+
